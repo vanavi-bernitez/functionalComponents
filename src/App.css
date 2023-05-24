@@ -1,38 +1,207 @@
 .App {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  background-color: rgba(238, 238, 238, 0.933);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  position: sticky;
+  top: 0;
+  width: 97vw;
+  background-color: #285430;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eeee;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.menuContainer button {
+  background: none;
+  background-image: url("./images/forwardStatic.png");
+  background-size: cover;
+  transform: rotate(90deg);
+  border: none;
+  width: 3em;
+  height: 3em;
+  margin-left: 1em;
+}
+
+.menuContainer button:hover {
+  background-image: url("./images/forward.gif");
+  background-size: cover;
+  border-radius: 2em;
+}
+
+.menuContainer li {
+  list-style-type: none;
+}
+
+.BCImageContainer {
+  display: grid;
+  place-items: center;
+  width: 60vw;
+}
+
+.BCImageContainer img {
+  max-height: 40vw;
+}
+
+.sliders {
+  display: grid;
+  place-items: center;
+}
+
+.sliders input {
+  width: 30vw;
+}
+
+section {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.pillButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkLightChangedContainer,
+.iconChangedContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.darkLightChangedContainer button,
+.iconChangedContainer button {
+  width: 7em;
+  height: 4em;
+  border-radius: 2em;
+  background-color: rgba(229, 217, 182, 0.5);
+}
+
+.darkLightChangedContainer button:hover,
+.iconChangedContainer button:hover {
+  background-color: rgba(229, 217, 182, 0.8);
+}
+
+.DLCImageContainer,
+.ICImageContainer,
+.cardImageContainer {
+  width: 10vw;
+  height: 10vw;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.DLCImageContainer img,
+.ICImageContainer img,
+.cardImageContainer img {
+  width: 7vw;
+  height: 7vw;
+}
+
+.iconsContainer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.widgetContainer {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.widgetContainer .leftSection {
+  margin: 1em;
+  padding: 1em;
+  max-width: 15vw;
+  min-width: 10vw;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  background-color: rgba(164, 190, 123, 1);
+}
+
+.widgetContainer .rightSection {
+  margin: 1em;
+  padding: 1em;
+}
+
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: rgba(238, 238, 238, 0.4);
+}
+.itemsList li {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #285430;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actionButtons button {
+  border-radius: 2em;
+  width: 5em;
+  height: 3em;
+  background-color: rgba(229, 217, 182, 1);
+  color: #285430;
+}
+
+.dictionaryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.dictionaryContainer input {
+  height: 3em;
+  background-color: #eeee;
+  border-radius: 1em;
+  margin-right: 1em;
+}
+
+.dictionaryContainer button {
+  border-radius: 2em;
+  width: 5em;
+  height: 3em;
+  background-color: rgba(229, 217, 182, 1);
+  color: #285430;
+
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(30deg);
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  40% {
+    transform: rotate(-30deg);
   }
 }
